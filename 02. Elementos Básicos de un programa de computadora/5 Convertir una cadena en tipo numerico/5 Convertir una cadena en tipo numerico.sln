@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5 Convertir una cadena en tipo numerico", "5 Convertir una cadena en tipo numerico\5 Convertir una cadena en tipo numerico.csproj", "{6074AE1F-F080-4D61-87A5-9B71EE8310B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6074AE1F-F080-4D61-87A5-9B71EE8310B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6074AE1F-F080-4D61-87A5-9B71EE8310B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6074AE1F-F080-4D61-87A5-9B71EE8310B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6074AE1F-F080-4D61-87A5-9B71EE8310B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5484C9F9-3C22-45E5-94D5-27D83F930438}
+	EndGlobalSection
+EndGlobal

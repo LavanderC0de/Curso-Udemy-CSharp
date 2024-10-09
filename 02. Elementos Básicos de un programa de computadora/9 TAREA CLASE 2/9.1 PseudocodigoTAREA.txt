@@ -1,0 +1,18 @@
+INICIO 
+
+1. Pedir el numero de lados
+2. Pedir la medida de alguno de los lados
+3. Calcular el perímetro multiplicando la medida por el numero
+4. Mostrar Perímetro
+
+
+
+variables:
+    int: numerolados
+    doublé: tamañolado, perímetro
+Escribir ("Dame el numero de lados: ")
+Leer (numerolados)
+Escribir ("Dame el tamaño de uno de los lados: ")
+Leer (tamañolado)
+perímetro = numerolados * tamañolado
+Escribir ("El perímetro es: ", perímetro)
