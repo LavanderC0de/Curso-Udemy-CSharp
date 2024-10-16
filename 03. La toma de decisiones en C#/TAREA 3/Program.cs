@@ -91,10 +91,41 @@ namespace tarea3
         }
         static void Tarea2()
         {
-        Console.WriteLine("Ejecutando la tarea 2: Verificar si un número es par o impar.");
+            Console.WriteLine("EJECUTANDO EJERCICIO 2: Verificar si un número es par o impar.");
+            Console.WriteLine("-------------------------------------------------------------");
+            Console.Write("Inserta un número para verificar si es par o impar: ");
+
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            if (numero % 2 == 0)  // Verifica si el número es divisible entre 2
+            {
+                Console.WriteLine("El número " + numero + " es par.");
+            }
+            else
+            {
+                Console.WriteLine("El número " + numero + " es impar.");
+            }
         }
-        static void Tarea3() {
-            Console.WriteLine("Ejecutando la tarea 3: Calcular el precio del estacionamiento.");
+        static void Tarea3()
+        {
+            Console.WriteLine("EJECUTANDO EL EJERCICIO 3: Calcular el precio del estacionamiento.");
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.Write("Inserta el tiempo (en minutos) que has estado estacionado: ");
+
+            int minutos = Convert.ToInt32(Console.ReadLine());
+
+            if (minutos <= 60)
+            {
+                Console.WriteLine("El precio del estacionamiento es de $5.00");
+            }
+            else if (minutos <= 120)
+            {
+                Console.WriteLine("El precio del estacionamiento es de $15.00");
+            }
+            else
+            {
+                Console.WriteLine("El precio del estacionamiento es de $40.00");
+            }
         }
     }         
 }
