@@ -1,37 +1,110 @@
 ﻿using System;
 
-class Program
+namespace CalculadoraPotenciasYPrimos
 {
-    static void Main()
+    class Program
     {
-        Console.Write("Introduce la base: ");
-        double baseNumber = Convert.ToDouble(Console.ReadLine());
-
-        Console.Write("Introduce el exponente: ");
-        int exponent = Convert.ToInt32(Console.ReadLine());
-
-        double result = 1;
-
-        if (exponent == 0)
+        static void Main(string[] args)
         {
-            result = 1;
-        }
-        else if (exponent > 0)
-        {
-            for (int i = 1; i <= exponent; i++)
+            string opcion;
+            bool opcionValida = false;
+
+            while (!opcionValida)
             {
-                result *= baseNumber;
+                Console.Clear();
+                Console.WriteLine("Este programa tiene dos opciones:");
+                Console.WriteLine("------------------------------------------------");
+                Console.WriteLine("1. Calcular la potencia de un número.");
+                Console.WriteLine("2. Mostrar los números primos entre 1 y 100.");
+                Console.WriteLine("------------------------------------------------");
+                Console.Write("Elige una opción (1 o 2): ");
+
+                opcion = Console.ReadLine();
+
+                switch (opcion)
+                {
+                    case "1":
+                        Console.Clear();
+                        CalcularPotencia();
+                        opcionValida = true;
+                        break;
+                    case "2":
+                        Console.Clear();
+                        MostrarPrimos();
+                        opcionValida = true;
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Esta opción no es válida porque no has seleccionado un número entre 1 y 2.");
+                        Console.WriteLine("Pulse cualquier tecla para volver a intentarlo...");
+                        Console.ReadKey();
+                        break;
+                }
             }
         }
-        else
+
+        static void CalcularPotencia()
         {
-            for (int i = 1; i <= -exponent; i++)
+            Console.WriteLine("EJERCICIO 1: Calcular la potencia de un número.");
+            Console.WriteLine("------------------------------------------------");
+
+            Console.Write("Introduce la base: ");
+            double numeroBase = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Introduce el exponente: ");
+            int exponente = Convert.ToInt32(Console.ReadLine());
+
+            double resultado = 1;
+
+            if (exponente == 0)
             {
-                result *= baseNumber;
+                resultado = 1;
             }
-            result = 1 / result;
+            else if (exponente > 0)
+            {
+                for (int i = 1; i <= exponente; i++)
+                {
+                    resultado *= numeroBase;
+                }
+            }
+            else
+            {
+                for (int i = 1; i <= -exponente; i++)
+                {
+                    resultado *= numeroBase;
+                }
+                resultado = 1 / resultado;
+            }
+
+            Console.WriteLine($"Resultado: {resultado}");
         }
 
-        Console.WriteLine($"Resultado: {result}");
+        static void MostrarPrimos()
+        {
+            Console.WriteLine("EJERCICIO 2: Mostrar los números primos entre 1 y 100.");
+            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("Los números primos entre el 1 y el 100 son: ");
+
+            for (int num = 2; num <= 100; num++)
+            {
+                bool esPrimo = true;
+
+                for (int divisor = 2; divisor <= Math.Sqrt(num); divisor++)
+                {
+                    if (num % divisor == 0)
+                    {
+                        esPrimo = false;
+                        break;
+                    }
+                }
+
+                if (esPrimo)
+                {
+                    Console.Write(num + " ");
+                }
+            }
+
+            Console.WriteLine();
+        }
     }
 }
