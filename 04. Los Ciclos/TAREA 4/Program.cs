@@ -1,5 +1,8 @@
 ﻿using System;
 
+/* Hacer un programa que calcule la potencia, ya sea negativa o positiva de cualquier exponente.
+Hacer un programa que calcule los números primos que existen entre el 1 y el 100*/
+
 namespace CalculadoraPotenciasYPrimos
 {
     class Program
@@ -104,7 +107,6 @@ namespace CalculadoraPotenciasYPrimos
                 }
             }
 
-            Console.WriteLine();
         }
     }
 }
